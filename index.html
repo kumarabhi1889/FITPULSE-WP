@@ -1,0 +1,596 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>FitPulse – Fitness & Wellness</title>
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=DM+Sans:wght@300;400;500;600&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet"/>
+  <link rel="stylesheet" href="style.css"/>
+</head>
+<body>
+
+<!-- NAV -->
+<nav id="navbar">
+  <div class="nav-logo" onclick="showPage('home')" style="cursor:pointer">FIT<span>PULSE</span></div>
+  <ul class="nav-links">
+    <li><a href="#" onclick="showPage('home')">Home</a></li>
+    <li><a href="#" onclick="showPage('exercises')">Exercises</a></li>
+    <li><a href="#" onclick="showPage('workouts')">Workouts</a></li>
+    <li><a href="#" onclick="showPage('bmi')">BMI</a></li>
+    <li><a href="#" onclick="showPage('progress')">Progress</a></li>
+    <li><a href="#" onclick="showPage('timetable')">Timetable</a></li>
+    <li><a href="#" onclick="showPage('about')">About</a></li>
+  </ul>
+  <button class="nav-cta btn-primary" onclick="showPage('workouts')">Get Started</button>
+  <div class="hamburger" onclick="toggleMenu()">&#9776;</div>
+</nav>
+
+<!-- ══════════════════════════════════
+     PAGE: HOME
+══════════════════════════════════ -->
+<div id="page-home" class="page active">
+
+  <!-- HERO -->
+  <section class="hero">
+    <div class="hero-bg"></div>
+    <div class="hero-content">
+      <p class="hero-tag">YOUR TRANSFORMATION STARTS NOW</p>
+      <h1 class="hero-title">TRAIN.<br/>TRACK.<br/>TRANSFORM.</h1>
+      <p class="hero-sub">Science-backed workouts, real-time BMI analysis, and a timetable built around your life.</p>
+      <div class="hero-btns">
+        <a href="#" class="btn-primary" onclick="showPage('workouts')">Explore Workouts</a>
+        <a href="#" class="btn-outline" onclick="showPage('bmi')">Check BMI</a>
+      </div>
+      <div class="hero-stats">
+        <div class="stat"><span>500+</span><p>Exercises</p></div>
+        <div class="stat"><span>20+</span><p>Programs</p></div>
+        <div class="stat"><span>10K+</span><p>Members</p></div>
+      </div>
+    </div>
+    <div class="hero-img">
+      <div class="hero-card">
+        <div class="card-ring"></div>
+        <div class="card-icon">💪</div>
+        <p>Today's Goal</p>
+        <h3>Upper Body Blast</h3>
+        <span class="badge">45 min</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- FEATURES STRIP -->
+  <section class="features-strip">
+    <div class="container">
+      <div class="features-grid">
+        <div class="feature-item" onclick="showPage('exercises')">
+          <span class="f-icon">🏋️</span>
+          <div>
+            <h4>500+ Exercises</h4>
+            <p>Categorised by type and muscle group</p>
+          </div>
+        </div>
+        <div class="feature-item" onclick="showPage('workouts')">
+          <span class="f-icon">📋</span>
+          <div>
+            <h4>Structured Programs</h4>
+            <p>Beginner to advanced multi-week plans</p>
+          </div>
+        </div>
+        <div class="feature-item" onclick="showPage('bmi')">
+          <span class="f-icon">📊</span>
+          <div>
+            <h4>BMI Calculator</h4>
+            <p>Indian standards — metric (kg/cm)</p>
+          </div>
+        </div>
+        <div class="feature-item" onclick="showPage('progress')">
+          <span class="f-icon">📈</span>
+          <div>
+            <h4>Progress Tracking</h4>
+            <p>Log workouts, calories & consistency</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- QUICK PREVIEW: CATEGORIES -->
+  <section class="section">
+    <div class="container">
+      <div class="section-header">
+        <p class="label">EXPLORE</p>
+        <h2>What Will You Train?</h2>
+        <p class="desc">Pick your focus and dive into targeted exercise libraries.</p>
+      </div>
+      <div class="category-grid">
+        <div class="cat-card" onclick="showPage('exercises', 'strength')">
+          <div class="cat-icon">🏋️</div>
+          <h3>Strength</h3>
+          <p>Build muscle & power</p>
+          <span class="cat-count">120 exercises</span>
+        </div>
+        <div class="cat-card" onclick="showPage('exercises', 'cardio')">
+          <div class="cat-icon">🏃</div>
+          <h3>Cardio</h3>
+          <p>Burn fat & boost endurance</p>
+          <span class="cat-count">85 exercises</span>
+        </div>
+        <div class="cat-card" onclick="showPage('exercises', 'yoga')">
+          <div class="cat-icon">🧘</div>
+          <h3>Yoga & Flexibility</h3>
+          <p>Improve mobility & mindfulness</p>
+          <span class="cat-count">70 exercises</span>
+        </div>
+        <div class="cat-card" onclick="showPage('exercises', 'hiit')">
+          <div class="cat-icon">⚡</div>
+          <h3>HIIT</h3>
+          <p>High intensity, max results</p>
+          <span class="cat-count">60 exercises</span>
+        </div>
+        <div class="cat-card" onclick="showPage('exercises', 'core')">
+          <div class="cat-icon">🎯</div>
+          <h3>Core & Abs</h3>
+          <p>Stability & definition</p>
+          <span class="cat-count">55 exercises</span>
+        </div>
+        <div class="cat-card" onclick="showPage('exercises', 'recovery')">
+          <div class="cat-icon">🌿</div>
+          <h3>Recovery</h3>
+          <p>Stretch & restore</p>
+          <span class="cat-count">40 exercises</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="container footer-inner">
+      <div class="footer-brand">
+        <div class="nav-logo">FIT<span>PULSE</span></div>
+        <p>Your complete fitness companion. Train smart, track progress, transform your life.</p>
+        <p class="student-info">👤 Abhishek Kumar &nbsp;|&nbsp; Reg: 24BCE0585</p>
+        <p class="student-info">BCSE203E – Web Programming &nbsp;|&nbsp; VIT University</p>
+      </div>
+      <div class="footer-links">
+        <h4>Quick Links</h4>
+        <a href="#" onclick="showPage('home')">Home</a>
+        <a href="#" onclick="showPage('exercises')">Exercises</a>
+        <a href="#" onclick="showPage('workouts')">Workouts</a>
+        <a href="#" onclick="showPage('bmi')">BMI Calculator</a>
+        <a href="#" onclick="showPage('progress')">Progress</a>
+        <a href="#" onclick="showPage('timetable')">Timetable</a>
+      </div>
+      <div class="footer-contact">
+        <h4>Connect</h4>
+        <p>📧 hello@fitpulse.com</p>
+        <p>📞 +91 800 FIT PULSE</p>
+        <p>📍 VIT University, Vellore</p>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>© 2026 FitPulse &nbsp;|&nbsp; Abhishek Kumar (24BCE0585) &nbsp;|&nbsp; BCSE203E Web Programming Project</p>
+    </div>
+  </footer>
+</div>
+
+<!-- ══════════════════════════════════
+     PAGE: EXERCISES
+══════════════════════════════════ -->
+<div id="page-exercises" class="page">
+  <div class="page-hero dark-hero">
+    <div class="container">
+      <p class="label">LIBRARY</p>
+      <h1 class="page-title">Exercise Categories</h1>
+      <p class="page-sub">Choose your focus area and explore category-specific exercises with descriptions and muscle targets.</p>
+    </div>
+  </div>
+
+  <div class="container" style="padding:3rem 2rem;">
+    <div class="category-grid" id="exerciseCategoryGrid">
+      <div class="cat-card" onclick="showCategory('strength')">
+        <div class="cat-icon">🏋️</div><h3>Strength</h3><p>Build muscle & power</p>
+        <span class="cat-count">12 exercises</span>
+      </div>
+      <div class="cat-card" onclick="showCategory('cardio')">
+        <div class="cat-icon">🏃</div><h3>Cardio</h3><p>Burn fat & boost endurance</p>
+        <span class="cat-count">8 exercises</span>
+      </div>
+      <div class="cat-card" onclick="showCategory('yoga')">
+        <div class="cat-icon">🧘</div><h3>Yoga & Flexibility</h3><p>Improve mobility & mindfulness</p>
+        <span class="cat-count">9 exercises</span>
+      </div>
+      <div class="cat-card" onclick="showCategory('hiit')">
+        <div class="cat-icon">⚡</div><h3>HIIT</h3><p>High intensity, max results</p>
+        <span class="cat-count">8 exercises</span>
+      </div>
+      <div class="cat-card" onclick="showCategory('core')">
+        <div class="cat-icon">🎯</div><h3>Core & Abs</h3><p>Stability & definition</p>
+        <span class="cat-count">8 exercises</span>
+      </div>
+      <div class="cat-card" onclick="showCategory('recovery')">
+        <div class="cat-icon">🌿</div><h3>Recovery</h3><p>Stretch & restore</p>
+        <span class="cat-count">7 exercises</span>
+      </div>
+    </div>
+
+    <!-- Exercise List Panel -->
+    <div class="exercise-panel" id="exercisePanel">
+      <div class="panel-header">
+        <h3 id="panelTitle">Select a category</h3>
+        <button onclick="closePanel()" class="close-btn">✕</button>
+      </div>
+      <div class="exercise-list" id="exerciseList"></div>
+    </div>
+  </div>
+
+  <footer class="footer">
+    <div class="footer-bottom">
+      <p>© 2026 FitPulse &nbsp;|&nbsp; Abhishek Kumar (24BCE0585) &nbsp;|&nbsp; BCSE203E Web Programming</p>
+    </div>
+  </footer>
+</div>
+
+<!-- ══════════════════════════════════
+     PAGE: WORKOUTS
+══════════════════════════════════ -->
+<div id="page-workouts" class="page">
+  <div class="page-hero dark-hero">
+    <div class="container">
+      <p class="label">PROGRAMS</p>
+      <h1 class="page-title">Workout Plans</h1>
+      <p class="page-sub">Structured multi-week programs designed for every fitness level. Click any plan for the full week-by-week breakdown.</p>
+    </div>
+  </div>
+
+  <div class="container" style="padding:3rem 2rem;">
+    <div class="plan-filter">
+      <button class="filter-btn active" onclick="filterPlans('all', this)">All</button>
+      <button class="filter-btn" onclick="filterPlans('beginner', this)">Beginner</button>
+      <button class="filter-btn" onclick="filterPlans('intermediate', this)">Intermediate</button>
+      <button class="filter-btn" onclick="filterPlans('advanced', this)">Advanced</button>
+    </div>
+    <div class="plans-grid" id="plansGrid"></div>
+  </div>
+
+  <footer class="footer">
+    <div class="footer-bottom">
+      <p>© 2026 FitPulse &nbsp;|&nbsp; Abhishek Kumar (24BCE0585) &nbsp;|&nbsp; BCSE203E Web Programming</p>
+    </div>
+  </footer>
+</div>
+
+<!-- WORKOUT DETAIL MODAL -->
+<div id="workoutModal" class="modal-overlay" onclick="closeWorkoutModal(event)">
+  <div class="modal-box" id="modalBox">
+    <button class="modal-close" onclick="closeWorkoutModalBtn()">✕</button>
+    <div id="modalContent"></div>
+  </div>
+</div>
+
+<!-- ══════════════════════════════════
+     PAGE: BMI
+══════════════════════════════════ -->
+<div id="page-bmi" class="page">
+  <div class="page-hero dark-hero">
+    <div class="container">
+      <p class="label">HEALTH TOOL</p>
+      <h1 class="page-title">BMI Calculator</h1>
+      <p class="page-sub">Body Mass Index — assessed using Indian health standards. Default unit: Metric (kg / cm).</p>
+    </div>
+  </div>
+
+  <div class="container" style="padding:3rem 2rem;">
+    <div class="bmi-wrapper">
+      <div class="bmi-info">
+        <p class="label">WHAT IS BMI?</p>
+        <h2>Body Mass Index</h2>
+        <p>BMI = Weight (kg) ÷ Height² (m²). It is a simple screening tool used globally and calibrated for Indian adults by the Indian Council of Medical Research (ICMR) and WHO-SEARO.</p>
+        <br/>
+        <p style="color:var(--accent);font-size:0.85rem;font-weight:600;">⚠️ Indian-specific BMI cut-offs (ICMR / WHO-SEARO)</p>
+        <div class="bmi-scale" style="margin-top:1rem;">
+          <div class="scale-item underweight"><span>&lt; 18.5</span><p>Underweight</p></div>
+          <div class="scale-item normal"><span>18.5–22.9</span><p>Normal</p></div>
+          <div class="scale-item overweight"><span>23–24.9</span><p>Overweight</p></div>
+          <div class="scale-item obese"><span>≥ 25</span><p>Obese</p></div>
+        </div>
+        <div class="bmi-note">
+          <p>📌 <strong>Why different from Western standards?</strong> Studies show Indians have higher body fat % at lower BMI due to genetic predisposition. The ICMR and WHO-SEARO recommend a cut-off of 23 (not 25) for overweight in South Asians.</p>
+        </div>
+        <div class="bmi-extra-info">
+          <h4>Ideal BMI Range for Indians</h4>
+          <p>18.5 to 22.9 — This range is associated with the lowest health risk for the Indian population.</p>
+          <h4 style="margin-top:1rem;">Healthy Weight Calculation</h4>
+          <p>Healthy weight (kg) = BMI × Height² (m²)</p>
+          <p>For 18.5 ≤ BMI ≤ 22.9 (Indian standard)</p>
+        </div>
+      </div>
+      <div class="bmi-calculator">
+        <div class="unit-toggle">
+          <button class="unit-btn active" id="metricBtn" onclick="setUnit('metric')">Metric (kg / cm) ✓ Indian</button>
+          <button class="unit-btn" id="imperialBtn" onclick="setUnit('imperial')">Imperial (lb / in)</button>
+        </div>
+        <div class="bmi-form">
+          <div class="form-group">
+            <label>Age</label>
+            <input type="number" id="ageInput" placeholder="e.g. 20" min="1" max="120"/>
+          </div>
+          <div class="form-group">
+            <label>Gender</label>
+            <select id="genderInput">
+              <option value="">Select gender</option>
+              <option value="male">Male</option>
+              <option value="female">Female</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label id="heightLabel">Height (cm)</label>
+            <input type="number" id="heightInput" placeholder="e.g. 170" min="1"/>
+          </div>
+          <div class="form-group">
+            <label id="weightLabel">Weight (kg)</label>
+            <input type="number" id="weightInput" placeholder="e.g. 65" min="1"/>
+          </div>
+          <button class="btn-primary full-width" onclick="calculateBMI()">Calculate BMI</button>
+        </div>
+        <div class="bmi-result" id="bmiResult" style="display:none">
+          <div class="result-circle">
+            <span id="bmiValue">--</span>
+            <p>BMI</p>
+          </div>
+          <div class="result-details">
+            <p class="result-category" id="bmiCategory"></p>
+            <p class="result-advice" id="bmiAdvice"></p>
+            <p class="ideal-weight" id="idealWeight"></p>
+            <p class="ideal-weight" id="idealWeightIndian" style="color:var(--accent2);margin-top:0.3rem;"></p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <footer class="footer">
+    <div class="footer-bottom">
+      <p>© 2026 FitPulse &nbsp;|&nbsp; Abhishek Kumar (24BCE0585) &nbsp;|&nbsp; BCSE203E Web Programming</p>
+    </div>
+  </footer>
+</div>
+
+<!-- ══════════════════════════════════
+     PAGE: PROGRESS
+══════════════════════════════════ -->
+<div id="page-progress" class="page">
+  <div class="page-hero dark-hero">
+    <div class="container">
+      <p class="label">TRACK</p>
+      <h1 class="page-title">Progress Tracker</h1>
+      <p class="page-sub">Log your workouts and watch your consistency grow over time. Data saved in your browser.</p>
+    </div>
+  </div>
+
+  <div class="container" style="padding:3rem 2rem;">
+    <div class="progress-layout">
+      <div class="log-form">
+        <h3>Log Today's Workout</h3>
+        <div class="form-group">
+          <label>Date</label>
+          <input type="date" id="logDate"/>
+        </div>
+        <div class="form-group">
+          <label>Exercise Type</label>
+          <select id="logType">
+            <option value="Strength">Strength</option>
+            <option value="Cardio">Cardio</option>
+            <option value="HIIT">HIIT</option>
+            <option value="Yoga">Yoga</option>
+            <option value="Core">Core</option>
+            <option value="Recovery">Recovery</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label>Duration (minutes)</label>
+          <input type="number" id="logDuration" placeholder="e.g. 45" min="1"/>
+        </div>
+        <div class="form-group">
+          <label>Calories Burned (est.)</label>
+          <input type="number" id="logCalories" placeholder="e.g. 300" min="0"/>
+        </div>
+        <div class="form-group">
+          <label>Notes</label>
+          <input type="text" id="logNotes" placeholder="How did it feel?"/>
+        </div>
+        <button class="btn-primary full-width" onclick="logWorkout()">Log Workout</button>
+      </div>
+      <div class="progress-display">
+        <div class="stats-row">
+          <div class="stat-box">
+            <span id="totalWorkouts">0</span>
+            <p>Total Workouts</p>
+          </div>
+          <div class="stat-box">
+            <span id="totalMinutes">0</span>
+            <p>Total Minutes</p>
+          </div>
+          <div class="stat-box">
+            <span id="totalCalories">0</span>
+            <p>Calories Burned</p>
+          </div>
+        </div>
+        <div class="workout-log" id="workoutLog">
+          <p class="empty-log">No workouts logged yet. Start tracking today!</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <footer class="footer">
+    <div class="footer-bottom">
+      <p>© 2026 FitPulse &nbsp;|&nbsp; Abhishek Kumar (24BCE0585) &nbsp;|&nbsp; BCSE203E Web Programming</p>
+    </div>
+  </footer>
+</div>
+
+<!-- ══════════════════════════════════
+     PAGE: TIMETABLE
+══════════════════════════════════ -->
+<div id="page-timetable" class="page">
+  <div class="page-hero dark-hero">
+    <div class="container">
+      <p class="label">SCHEDULE</p>
+      <h1 class="page-title">Class Timetable</h1>
+      <p class="page-sub">Browse our full weekly class schedule. Hover over any class to see the instructor details.</p>
+    </div>
+  </div>
+
+  <div class="container" style="padding:3rem 2rem;">
+    <div class="timetable-wrapper">
+      <table class="timetable">
+        <thead>
+          <tr>
+            <th>Time</th>
+            <th>Monday</th>
+            <th>Tuesday</th>
+            <th>Wednesday</th>
+            <th>Thursday</th>
+            <th>Friday</th>
+            <th>Saturday</th>
+            <th>Sunday</th>
+          </tr>
+        </thead>
+        <tbody id="timetableBody"></tbody>
+      </table>
+    </div>
+    <div class="timetable-legend">
+      <span class="leg strength">Strength</span>
+      <span class="leg cardio">Cardio</span>
+      <span class="leg yoga">Yoga</span>
+      <span class="leg hiit">HIIT</span>
+      <span class="leg core">Core</span>
+      <span class="leg rest">Rest</span>
+    </div>
+  </div>
+
+  <footer class="footer">
+    <div class="footer-bottom">
+      <p>© 2026 FitPulse &nbsp;|&nbsp; Abhishek Kumar (24BCE0585) &nbsp;|&nbsp; BCSE203E Web Programming</p>
+    </div>
+  </footer>
+</div>
+
+<!-- ══════════════════════════════════
+     PAGE: ABOUT
+══════════════════════════════════ -->
+<div id="page-about" class="page">
+  <div class="page-hero dark-hero">
+    <div class="container">
+      <p class="label">PROJECT</p>
+      <h1 class="page-title">About FitPulse</h1>
+      <p class="page-sub">A comprehensive fitness & wellness web application built for BCSE203E – Web Programming at VIT University.</p>
+    </div>
+  </div>
+
+  <div class="container" style="padding:3rem 2rem;">
+    <div class="about-grid">
+      <div class="about-card student-card">
+        <div class="student-avatar">AK</div>
+        <h2>Abhishek Kumar</h2>
+        <p class="reg-no">Registration No: <strong>24BCE0585</strong></p>
+        <p>B.Tech Computer Science &amp; Engineering</p>
+        <p>VIT University, Vellore</p>
+        <div class="course-badge">BCSE203E – Web Programming</div>
+      </div>
+      <div class="about-features">
+        <p class="label">FEATURES IMPLEMENTED</p>
+        <h2>What's Inside</h2>
+        <div class="feature-list">
+          <div class="feat-item">
+            <span class="feat-num">01</span>
+            <div>
+              <h4>Exercise Category Library</h4>
+              <p>6 categories (Strength, Cardio, Yoga, HIIT, Core, Recovery) with 50+ exercises, descriptions, and muscle group tags.</p>
+            </div>
+          </div>
+          <div class="feat-item">
+            <span class="feat-num">02</span>
+            <div>
+              <h4>Workout Plans with Full Breakdown</h4>
+              <p>9 structured programs (Beginner → Advanced). Click any plan for a detailed week-by-week schedule with daily workout descriptions.</p>
+            </div>
+          </div>
+          <div class="feat-item">
+            <span class="feat-num">03</span>
+            <div>
+              <h4>BMI Calculator (Indian Standards)</h4>
+              <p>Metric/Imperial support. Uses ICMR/WHO-SEARO cut-offs (Overweight ≥ 23, Obese ≥ 25) calibrated for South Asians.</p>
+            </div>
+          </div>
+          <div class="feat-item">
+            <span class="feat-num">04</span>
+            <div>
+              <h4>Progress Tracker</h4>
+              <p>Log workouts with date, type, duration, calories, and notes. Persistent via localStorage. Running totals and deletable entries.</p>
+            </div>
+          </div>
+          <div class="feat-item">
+            <span class="feat-num">05</span>
+            <div>
+              <h4>Class Timetable</h4>
+              <p>Full Mon–Sun weekly schedule across 10 time slots. Color-coded by class type with instructor names.</p>
+            </div>
+          </div>
+          <div class="feat-item">
+            <span class="feat-num">06</span>
+            <div>
+              <h4>Multi-Page SPA Architecture</h4>
+              <p>7 distinct pages with smooth transitions. Clean navigation and consistent design across all sections.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="tech-stack">
+      <p class="label" style="text-align:center;margin-bottom:1.5rem;">TECHNOLOGIES USED</p>
+      <div class="tech-grid">
+        <div class="tech-item"><span>HTML5</span><p>Semantic markup</p></div>
+        <div class="tech-item"><span>CSS3</span><p>Grid, Flexbox, Variables</p></div>
+        <div class="tech-item"><span>JavaScript ES6+</span><p>Vanilla JS, DOM API</p></div>
+        <div class="tech-item"><span>localStorage</span><p>Persistent data</p></div>
+        <div class="tech-item"><span>Google Fonts</span><p>Bebas Neue, DM Sans</p></div>
+        <div class="tech-item"><span>GitHub Pages</span><p>Deployment</p></div>
+      </div>
+    </div>
+  </div>
+
+  <footer class="footer">
+    <div class="container footer-inner">
+      <div class="footer-brand">
+        <div class="nav-logo">FIT<span>PULSE</span></div>
+        <p>Your complete fitness companion.</p>
+        <p class="student-info">👤 Abhishek Kumar &nbsp;|&nbsp; Reg: 24BCE0585</p>
+      </div>
+      <div class="footer-links">
+        <h4>Pages</h4>
+        <a href="#" onclick="showPage('home')">Home</a>
+        <a href="#" onclick="showPage('exercises')">Exercises</a>
+        <a href="#" onclick="showPage('workouts')">Workouts</a>
+        <a href="#" onclick="showPage('bmi')">BMI Calculator</a>
+        <a href="#" onclick="showPage('progress')">Progress</a>
+        <a href="#" onclick="showPage('timetable')">Timetable</a>
+      </div>
+      <div class="footer-contact">
+        <h4>Project Info</h4>
+        <p>📚 BCSE203E – Web Programming</p>
+        <p>🏫 VIT University, Vellore</p>
+        <p>📅 Academic Year 2025–26</p>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>© 2026 FitPulse &nbsp;|&nbsp; Abhishek Kumar (24BCE0585) &nbsp;|&nbsp; BCSE203E Web Programming Project</p>
+    </div>
+  </footer>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
