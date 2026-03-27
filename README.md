@@ -14,12 +14,6 @@ The goal of this project is to create an interactive and user-friendly fitness w
 
 ---
 
-## 💻 GitHub Repository
-
-🔗 *[Add your GitHub repo link here]*
-
----
-
 ## ✨ Features
 
 ### 🧮 BMI Calculator
@@ -134,8 +128,8 @@ This project is deployed using **GitHub Pages**:
 
 ## 👤 Author
 
-**S. Sriaditya**
-Reg No: 22BCE2212
+**Abhishek Kumar**
+Reg No: 24BCE0585
 
 ---
 
