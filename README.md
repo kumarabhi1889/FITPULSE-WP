@@ -52,22 +52,6 @@ The goal of this project is to create an interactive and user-friendly fitness w
 
 ---
 
-## 📁 Project Structure
-
-```
-FITPULSE-WP/
-│── index.html
-│── css/
-│   └── styles.css
-│── js/
-│   └── script.js
-│── images/
-│── pages/
-│── README.md
-```
-
----
-
 ## ⚙️ How to Run the Project
 
 ### Option 1: Run Locally
